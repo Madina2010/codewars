@@ -1,38 +1,42 @@
-function positiveSum(arr) {
-    var sum = 0;
-   for (let i = 0; i < arr.length; i++) {
-      if (arr[i] > 0) {
-        sum += arr[i];
-      }
-    }
-    return sum
-  }
+function getMax1()
+{
+  var max = {name: 'Max Headroom'}
+  
+  return max;
+}
 
-//   ////////////////////////////////////////////////////////////////////////////////////////
-function evenOrOdd(number) {
-    if (number % 2 === 0) {
-      return "Even"
-    } else {
-      return "Odd"
-    }
+function getMax2()
+{
+  var max = {name: 'Max Headroom'}
+  return max;
+}
+// /////////////////////////////////////////////////////////
+function buildString(...template) {
+    return `I like ${template.join(', ')}!`;
   }
-//   ////////////////////////////////////////////////////////////////////////////////////////
-function validate(username, password){
-    var database = new Database();
-    if (username.includes('||') || password.includes('||') || username.includes('//') || password.includes('//')) {
-      return "Wrong username or password!";
-    }
-    return database.login(username, password);
-  }
-//   ////////////////////////////////////////////////////////////////////////////////////////
-function Warrior(n){
-    var name = n;  
-    this.name = function(n){
-      if( n ) name=n;
-      return name;
-    }
-  }
+//   ///////////////////////////////////////////////////////
+function howManyDalmatians(number) {
+    var dogs = ["Hardly any", "More than a handful!", "Woah that's a lot of dogs!", "101 DALMATIANS!!!"];
     
-  Warrior.prototype.toString = function(){
-      return "Hi! my name's " + this.name();
+    var respond = number <= 10 ? dogs[0] : (number <= 50 ? dogs[1] : (number === 101 ? dogs[3] : dogs[2]));
+  
+    return respond;
   }
+//   ////////////////////////////////////////////////////////
+var calculate = function(a, o, b) {
+    var result = 0;
+  
+    if (o === "+") {
+      return a + b;
+    } else if (o === "-") {
+      return a - b;
+    } else if (o === "/" && b !== 0) {
+      return a / b;
+    } else if (o === "*") {
+      return a * b;
+    } else {
+      return null
+    }
+  
+    return result;
+  };
